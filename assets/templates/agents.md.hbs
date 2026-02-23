@@ -1,0 +1,52 @@
+# Unified Agent Operating Contract (Generated)
+
+Generated at: `{{GENERATED_AT_UTC}}`
+
+## Session Bootstrap (Automatic)
+Before implementing code in a new session, run:
+
+`{{READY_COMMAND}}`
+
+If the command succeeds, continue without asking the user for setup steps.
+
+For bleeding-edge source refresh, run:
+
+`aeco ready --latest`
+
+## Repository Profile
+- Name: `{{REPO_NAME}}`
+- Architecture: {{ARCHITECTURE_SUMMARY}}
+- Key roots: {{KEY_ROOTS_MARKDOWN}}
+- Read-first docs: {{READ_FIRST_MARKDOWN}}
+
+## Default Execution Mode
+- Treat user feature/bug/refactor requests as execution requests, not brainstorming.
+- For non-trivial scope (multi-file, API contract changes, architecture changes, risky behavior): follow Spec-Kit flow.
+- For small scoped fixes: implement directly, but keep validation and reporting strict.
+
+## Skill Routing Policy
+1. Prefer namespaced skills from `docs/ai/skills-index.md`.
+2. Prefer `oa-*` over `ag-*` on ties unless user asks otherwise.
+3. Use at most 3 skills per task to avoid context bloat.
+4. {{STACK_ROUTING_HINT}}
+
+## Spec Workflow Policy
+- Primary flow: `/speckit.specify` -> `/speckit.plan` -> `/speckit.tasks` -> `/speckit.implement`.
+- If slash commands are unavailable, emulate the same phases using files in `specs/<feature-id>/`.
+- Keep each task traceable to a requirement and acceptance scenario.
+
+## Validation Gates
+- Backend: `{{BACKEND_VALIDATION_COMMAND}}`
+- Frontend static: `{{FRONTEND_VALIDATION_COMMAND}}`
+- Behavior-sensitive changes: {{BEHAVIOR_VALIDATION_HINT}}
+
+## Safety and Reporting
+- Never run destructive commands unless explicitly requested.
+- If any validation is skipped, report why and the risk.
+- Summarize changed files, commands run, and verification results.
+- {{DOC_UPDATE_HINT}}
+
+## References
+- Copilot instructions: `.github/copilot-instructions.md`
+- Skill router prompt: `.github/prompts/find-skill.prompt.md`
+- Skill execution prompt: `.github/prompts/use-skill.prompt.md`

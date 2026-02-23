@@ -1,0 +1,28 @@
+# Spec-Kit Task Implement
+
+Use this prompt to execute one task from an existing Spec-Kit task list.
+
+## Inputs
+- Spec/task identifier
+- Task number
+- Relevant files
+
+## Session Bootstrap
+- Run `{{READY_COMMAND}}` before task execution if runtime status is unknown.
+
+## Steps
+1. Confirm acceptance criteria linked to the selected task.
+2. Implement only scoped changes for that task.
+3. Run focused validation for touched layers.
+4. Report files changed, checks run, and any follow-up tasks.
+
+## Validation matrix
+- Backend-related task: `{{BACKEND_VALIDATION_COMMAND}}`
+- Frontend-related task: `{{FRONTEND_VALIDATION_COMMAND}}`
+- Behavior-sensitive task: {{BEHAVIOR_VALIDATION_HINT}}
+
+## Guardrails
+- Do not batch unrelated tasks.
+- Do not skip failing checks; fix or report blockers with impact.
+- Keep output traceable to spec requirements.
+- {{DOC_UPDATE_HINT}}

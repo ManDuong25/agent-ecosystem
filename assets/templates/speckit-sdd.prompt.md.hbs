@@ -1,0 +1,36 @@
+# Spec-Kit SDD Session
+
+Use this prompt when you want strict spec-driven development in this repository.
+
+## Inputs
+- Feature request or problem statement
+- Existing context from repo files
+
+## Session Bootstrap
+- Run `{{READY_COMMAND}}` before starting SDD if runtime status is unknown.
+
+## Pre-read (required)
+- {{READ_FIRST_MARKDOWN}}
+
+## Workflow
+1. Use `/speckit.specify` to create or refine the feature spec.
+2. Use `/speckit.plan` to produce architecture, constraints, and validation matrix.
+3. Use `/speckit.tasks` to break work into atomic tasks by user story.
+4. Use `/speckit.implement` task-by-task with validation after each task.
+
+## Standards
+- Keep requirements testable and non-ambiguous.
+- Reference concrete files and APIs in every task.
+- Explicitly mark backend/frontend/doc impact in each story.
+- Include rollback notes for risky behavior changes.
+- Prefer small PR-sized increments.
+
+## Required validations
+- Backend: `{{BACKEND_VALIDATION_COMMAND}}`
+- Frontend static: `{{FRONTEND_VALIDATION_COMMAND}}`
+- Behavior-sensitive changes: {{BEHAVIOR_VALIDATION_HINT}}
+
+## Default runner
+- Tool: `Spec-Kit`
+- AI target: `{{SPECFLOW_DEFAULT_AI}}`
+- Script flavor: `{{SPECFLOW_DEFAULT_SCRIPT}}`
