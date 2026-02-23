@@ -1,0 +1,39 @@
+# Copilot Agent Instructions (Generated)
+
+Generated at: `{{GENERATED_AT_UTC}}`
+
+Use this file as the operational bridge for Copilot agent mode.
+
+## Session Bootstrap
+Run once per session:
+
+`{{READY_COMMAND}}`
+
+For bleeding-edge source refresh:
+
+`aeco ready --latest`
+
+## Repository Profile
+- Name: `{{REPO_NAME}}`
+- Architecture: {{ARCHITECTURE_SUMMARY}}
+- Key roots: {{KEY_ROOTS_MARKDOWN}}
+- {{CRITICAL_BEHAVIOR_HINT}}
+
+## Execution Policy
+- Prefer namespaced skills (`oa-*`, `ag-*`) and repository prompts under `.github/prompts/`.
+- For multi-file or risky changes, use the Spec-Kit flow (`/speckit.specify`, `/speckit.plan`, `/speckit.tasks`,
+`/speckit.implement`) or emulate equivalent artifacts.
+- Keep responses traceable: plan, changed files, commands, verification.
+
+## Validation Policy
+- Backend: `{{BACKEND_VALIDATION_COMMAND}}`
+- Frontend static: `{{FRONTEND_VALIDATION_COMMAND}}`
+- Behavior-sensitive changes: {{BEHAVIOR_VALIDATION_HINT}}
+- {{DOC_UPDATE_HINT}}
+
+## References
+- `.github/copilot-instructions.md`
+- `.github/prompts/find-skill.prompt.md`
+- `.github/prompts/use-skill.prompt.md`
+- `.github/prompts/speckit-sdd.prompt.md`
+- `.github/prompts/speckit-implement.prompt.md`

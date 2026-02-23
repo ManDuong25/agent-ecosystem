@@ -1,0 +1,29 @@
+# Auto Execute (Codex)
+
+Use this prompt when the user gives a direct implementation request and wants zero setup friction.
+
+## Startup
+1. Run `{{READY_COMMAND}}`.
+2. If startup succeeds, continue immediately with implementation.
+
+## Repository Profile
+- Name: `{{REPO_NAME}}`
+- Architecture: {{ARCHITECTURE_SUMMARY}}
+- Key roots: {{KEY_ROOTS_MARKDOWN}}
+
+## Routing
+1. Pick 1-3 namespaced skills (`oa-*`, `ag-*`) from `docs/ai/skills-index.md`.
+2. {{STACK_ROUTING_HINT}}
+3. For non-trivial scope, run Spec-Kit flow before coding.
+4. For small scoped fixes, implement directly.
+
+## Validation
+- Backend: `{{BACKEND_VALIDATION_COMMAND}}`
+- Frontend: `{{FRONTEND_VALIDATION_COMMAND}}`
+- Behavior-sensitive: {{BEHAVIOR_VALIDATION_HINT}}
+
+## Required Output
+- Plan (short ordered steps)
+- Changes (files + commands)
+- Validation (what ran, result)
+- Risks/next actions (if any)

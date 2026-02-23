@@ -1,0 +1,32 @@
+# Use Skill
+
+Use this prompt after selecting a namespaced skill.
+
+## Inputs
+- Selected skill id: `<oa-...|ag-...>`
+    - User goal
+    - Relevant repo files
+    - Runtime readiness command: `{{READY_COMMAND}}`
+
+    ## Task
+    1. Load the selected skill `SKILL.md` and only the references needed for this task.
+    2. Follow the skill workflow exactly.
+    3. Implement with repo conventions and safety constraints.
+    4. Run the minimum required validation matrix for touched layers.
+
+    ## Output format
+    - `plan`: short ordered steps
+    - `changes`: files and commands executed
+    - `validation`: checks performed and results
+    - `next_actions`: optional follow-up actions
+
+    ## Validation matrix
+    - Backend-related changes: `{{BACKEND_VALIDATION_COMMAND}}`
+    - Frontend-related changes: `{{FRONTEND_VALIDATION_COMMAND}}`
+    - Behavior-sensitive changes: {{BEHAVIOR_VALIDATION_HINT}}
+
+    ## Constraints
+    - Do not run destructive commands unless explicitly requested.
+    - Keep generated code ASCII unless file already uses Unicode.
+    - If validation is skipped, explain reason and risk explicitly.
+    - {{DOC_UPDATE_HINT}}

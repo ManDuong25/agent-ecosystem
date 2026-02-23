@@ -1,11 +1,14 @@
-# Binaries
-bin/
+# Build
 dist/
-
-# Go
+bin/
 *.exe
-*.test
-*.out
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
 
 # OS
 .DS_Store
@@ -16,8 +19,9 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
-*~
 
-# Temp
-*.tmp
+# Runtime
 *.log
+*.tmp
+hub/
+cache/
