@@ -90,17 +90,17 @@ For the AI Engineer Loop, Chrome is launched with Puppeteer:
 src/
 +-- shared/types.ts          # Shared TypeScript interfaces
 +-- server/
-¦   +-- index.ts             # Express + Socket.io entry
-¦   +-- routes/              # API route handlers
-¦   +-- services/            # Business logic
-¦       +-- repo-scanner.ts  # Repo structure analysis
-¦       +-- template-engine.ts # Agent bridge file generation
-¦       +-- skill-manager.ts # GitHub skill management
-¦       +-- spec-engine.ts   # Spec-driven workflow
-¦       +-- ai-client.ts     # Gemini AI integration
-¦       +-- file-watcher.ts  # chokidar file watching
-¦       +-- chrome-bridge.ts # Puppeteer Chrome automation
-¦       +-- cache.ts         # Session-based caching
+ï¿½   +-- index.ts             # Express + Socket.io entry
+ï¿½   +-- routes/              # API route handlers
+ï¿½   +-- services/            # Business logic
+ï¿½       +-- repo-scanner.ts  # Repo structure analysis
+ï¿½       +-- template-engine.ts # Agent bridge file generation
+ï¿½       +-- skill-manager.ts # GitHub skill management
+ï¿½       +-- spec-engine.ts   # Spec-driven workflow
+ï¿½       +-- ai-client.ts     # Gemini AI integration
+ï¿½       +-- file-watcher.ts  # chokidar file watching
+ï¿½       +-- chrome-bridge.ts # Puppeteer Chrome automation
+ï¿½       +-- cache.ts         # Session-based caching
 +-- client/
     +-- App.tsx              # React Router setup
     +-- pages/               # Page components

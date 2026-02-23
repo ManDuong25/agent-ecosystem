@@ -1,0 +1,32 @@
+[
+  {
+    "title": "E2E Test Bug",
+    "description": "Test description",
+    "stepsToReproduce": "1. Step one\n2. Step two",
+    "severity": "medium",
+    "id": "da1ee79e-4ad8-4553-8321-66f7219a8b24",
+    "status": "open",
+    "createdAt": "2026-02-23T07:54:29.400Z",
+    "updatedAt": "2026-02-23T07:54:29.400Z"
+  },
+  {
+    "title": "E2E Test Bug",
+    "description": "Test description",
+    "stepsToReproduce": "1. Step one\n2. Step two",
+    "severity": "medium",
+    "id": "6571ae54-fce5-45ec-ba3f-66e28b786a94",
+    "status": "open",
+    "createdAt": "2026-02-23T08:01:09.325Z",
+    "updatedAt": "2026-02-23T08:01:09.325Z"
+  },
+  {
+    "title": "E2E Test Bug",
+    "description": "Test description",
+    "stepsToReproduce": "1. Step one\n2. Step two",
+    "severity": "medium",
+    "id": "54afb45b-7133-4861-9d12-b9b1b1e85b72",
+    "status": "open",
+    "createdAt": "2026-02-23T08:02:26.301Z",
+    "updatedAt": "2026-02-23T08:02:26.301Z"
+  }
+]

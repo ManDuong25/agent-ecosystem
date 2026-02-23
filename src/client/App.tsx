@@ -11,30 +11,30 @@ import AIEngineer from './pages/AIEngineer.js';
 import Bugs from './pages/Bugs.js';
 
 function AppInner() {
-  const { handleWSEvent } = useApp();
-  useSocket(handleWSEvent);
-  return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/repo" element={<RepoSetup />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/specs" element={<Specs />} />
-        <Route path="/specs/:specId" element={<Specs />} />
-        <Route path="/engineer" element={<AIEngineer />} />
-        <Route path="/bugs" element={<Bugs />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Layout>
-  );
+    const { handleWSEvent } = useApp();
+    useSocket(handleWSEvent);
+    return (
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/repo" element={<RepoSetup />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/specs" element={<Specs />} />
+                <Route path="/specs/:specId" element={<Specs />} />
+                <Route path="/engineer" element={<AIEngineer />} />
+                <Route path="/bugs" element={<Bugs />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+        </Layout>
+    );
 }
 
 export default function App() {
-  return (
-    <BrowserRouter>
-      <AppProvider>
-        <AppInner />
-      </AppProvider>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <AppProvider>
+                <AppInner />
+            </AppProvider>
+        </BrowserRouter>
+    );
 }

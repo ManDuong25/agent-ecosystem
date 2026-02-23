@@ -1,0 +1,11 @@
+{
+  "id": "smart-expense-tracker",
+  "name": "smart-expense-tracker",
+  "description": "A smart expense management web app with categorized transactions, recurring expenses, budgets, analytics charts, multi-currency support, and CSV/JSON export.",
+  "status": "specify",
+  "createdAt": "2026-02-23T08:03:12.787Z",
+  "updatedAt": "2026-02-23T08:03:12.787Z",
+  "repoPath": "D:\\\\agent-ecosystem",
+  "tasks": [],
+  "bugs": []
+}

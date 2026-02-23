@@ -25,3 +25,6 @@ Thumbs.db
 *.tmp
 hub/
 cache/
+demo-apps/expense-tracker/data/
+test-results/
+node_modules/

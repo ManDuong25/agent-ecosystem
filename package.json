@@ -9,9 +9,11 @@
     "dev:server": "tsx watch src/server/index.ts",
     "dev:client": "vite",
     "build": "vite build && tsc -p tsconfig.server.json",
-    "start": "node dist/server/index.js",
+    "start": "node dist/server/server/index.js",
     "preview": "npm run build && npm start",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
   },
   "dependencies": {
     "chokidar": "^4.0.3",
@@ -25,6 +27,7 @@
     "yaml": "^2.7.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.12.0",
@@ -43,7 +46,7 @@
     "react-router-dom": "^7.1.3",
     "socket.io-client": "^4.8.1",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.19.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.3",
     "vite": "^6.1.0"
   }

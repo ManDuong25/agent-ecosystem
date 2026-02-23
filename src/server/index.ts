@@ -21,13 +21,13 @@ const httpServer = createServer(app);
 
 // Socket.io
 const io = new SocketServer(httpServer, {
-  cors: { origin: '*', methods: ['GET', 'POST', 'PUT', 'DELETE'] },
+    cors: { origin: '*', methods: ['GET', 'POST', 'PUT', 'DELETE'] },
 });
 
 // Export io for routes to use
 let _io: SocketServer | null = null;
 export function getIO(): SocketServer | null {
-  return _io;
+    return _io;
 }
 
 // Middleware
@@ -43,30 +43,30 @@ app.use('/api/engineer', engineerRoutes);
 
 // Health check
 app.get('/api/health', (_req, res) => {
-  res.json({ ok: true, version: '0.2.0', uptime: process.uptime() });
+    res.json({ ok: true, version: '0.2.0', uptime: process.uptime() });
 });
 
 // Serve built client in production
 const clientDist = path.join(process.cwd(), 'dist', 'client');
 if (fs.existsSync(clientDist)) {
-  app.use(express.static(clientDist));
-  app.get('*', (_req, res) => {
-    res.sendFile(path.join(clientDist, 'index.html'));
-  });
+    app.use(express.static(clientDist));
+    app.get('*', (_req, res) => {
+        res.sendFile(path.join(clientDist, 'index.html'));
+    });
 }
 
 // WebSocket connections
 io.on('connection', (socket) => {
-  console.log(`[WS] Client connected: ${socket.id}`);
-  socket.on('disconnect', () => {
-    console.log(`[WS] Client disconnected: ${socket.id}`);
-  });
+    console.log(`[WS] Client connected: ${socket.id}`);
+    socket.on('disconnect', () => {
+        console.log(`[WS] Client disconnected: ${socket.id}`);
+    });
 });
 
 // Start
 _io = io;
 httpServer.listen(PORT, () => {
-  console.log(`
+    console.log(`
   ┌─────────────────────────────────────────────┐
   │                                             │
   │   🚀 Agent Ecosystem v0.2.0                │
